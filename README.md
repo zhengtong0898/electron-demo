@@ -20,6 +20,9 @@ yarn make
 ### 运行项目(包含打包vue)
 yarn start
 
+### 运行效果图
+![demo.png](./assets/demo.png)
+
 ### 关键信息
 
 1. electron 项目配置入口文件: forge.config.ts
@@ -35,3 +38,4 @@ yarn start
 7. public/index.html 是vue的渲染模板文件.
 8. public/electron.tsconfig.json 是编译electron时需要依赖的typescript描述文件.
 9. public/vue.tsconfig.json 是编译vue时需要依赖的typescript描述文件.  
+
