@@ -14,7 +14,8 @@
     "copyele": "cp public/electron.tsconfig.json ./tsconfig.json",
     "copyvue": "cp public/vue.tsconfig.json ./tsconfig.json",
     "cleanvue": "rm -rf dist/",
-    "makevue": "yarn cleanvue; yarn copyvue; webpack --config webpack.vue.config.ts"
+    "makevue": "yarn cleanvue; yarn copyvue; webpack --config webpack.vue.config.ts",
+    "debugnix": "yarn makevue; /usr/bin/sed -i 's/$DIR\\/..\\/..\\/..\\/@/$DIR\\/..\\/@/g' ./node_modules/.bin/electron-forge-vscode-nix" 
   },
   "keywords": [],
   "author": {
