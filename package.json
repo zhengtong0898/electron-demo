@@ -1,0 +1,54 @@
+{
+  "name": "ibuprofen-front3",
+  "productName": "ibuprofen-front3",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "yarn makevue; yarn copyele; electron-forge start",
+    "package": "electron-forge package",
+    "make": "yarn makevue; yarn copyele; electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx .",
+
+    "copyele": "cp public/electron.tsconfig.json ./tsconfig.json",
+    "copyvue": "cp public/vue.tsconfig.json ./tsconfig.json",
+    "cleanvue": "rm -rf dist/",
+    "makevue": "yarn cleanvue; yarn copyvue; webpack --config webpack.vue.config.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "zhengtong0898",
+    "email": "zhengtong0898@aliyun.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "@electron-forge/plugin-webpack": "^6.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "electron": "22.0.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "html-webpack-plugin": "^5.5.0",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "typescript": "~4.5.4",
+    "vue": "^3.2.45",
+    "vue-loader": "^17.0.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
