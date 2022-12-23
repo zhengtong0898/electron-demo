@@ -1,6 +1,6 @@
 {
-  "name": "ibuprofen-front3",
-  "productName": "ibuprofen-front3",
+  "name": "electron-demo",
+  "productName": "electron-demo",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".webpack/main",
