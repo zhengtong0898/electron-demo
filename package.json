@@ -5,9 +5,9 @@
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
-    "start": "yarn makevue; yarn copyele; electron-forge start",
+    "start": "yarn makevue; yarn copyele; electron-forge start; yarn copyvue",
     "package": "electron-forge package",
-    "make": "yarn makevue; yarn copyele; electron-forge make",
+    "make": "yarn makevue; yarn copyele; electron-forge make; yarn copyvue",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
 
@@ -15,7 +15,7 @@
     "copyvue": "cp public/vue.tsconfig.json ./tsconfig.json",
     "cleanvue": "rm -rf dist/",
     "makevue": "yarn cleanvue; yarn copyvue; webpack --config webpack.vue.config.ts",
-    "debugnix": "yarn makevue; /usr/bin/sed -i 's/$DIR\\/..\\/..\\/..\\/@/$DIR\\/..\\/@/g' ./node_modules/.bin/electron-forge-vscode-nix" 
+    "debugnix": "yarn makevue; /usr/bin/sed -i 's/$DIR\\/..\\/..\\/..\\/@/$DIR\\/..\\/@/g' ./node_modules/.bin/electron-forge-vscode-nix"
   },
   "keywords": [],
   "author": {
