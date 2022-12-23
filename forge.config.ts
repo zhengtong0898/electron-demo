@@ -21,7 +21,7 @@ const config: ForgeConfig = {
         entryPoints: [
           {
             html: './dist/index.html',
-            js: './dist/main.js',
+            js: './dist/index.js',
             name: 'main_window',
             preload: {
               js: './dist/preload.electron.ts',
