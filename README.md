@@ -26,7 +26,7 @@ yarn start
 按 F5 快捷键
 
 ### 运行效果图
-![demo.png](./assets/demo.png)
+![demo.png](./public/demo.png)
 
 ### 关键信息
 
