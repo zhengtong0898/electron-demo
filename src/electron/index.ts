@@ -13,8 +13,12 @@ if (require('electron-squirrel-startup')) {
 const createWindow = (): void => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800,
+    width: 500,
+    height: 300,
+    frame: true,
+    center: true,
+    resizable: true,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
@@ -23,12 +27,12 @@ const createWindow = (): void => {
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
-  console.log("MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: ", MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY)
-  console.log("MAIN_WINDOW_WEBPACK_ENTRY: ", MAIN_WINDOW_WEBPACK_ENTRY)
-
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
+  //////////////////////////////////////////////////////////
+  // 主进程和渲染进程通信: 单向(由渲染进程向主进程发送通知执行这段代码)
+  //////////////////////////////////////////////////////////
   ipcMain.on('setTitle', (event, title) => {
     const webContents = event.sender
     const win = BrowserWindow.fromWebContents(webContents)
@@ -37,10 +41,8 @@ const createWindow = (): void => {
     }
   })
 
-  // 主进程和渲染进程通信: 单向(由渲染进程向主进程发送通知执行这段代码)
   ipcMain.on('setSize', (event, width, height) => {
     const ipcBrowser = BrowserWindow.fromWebContents(event.sender)
-    console.log("Object.getOwnPropertyNames: ", Object.getOwnPropertyNames(ipcBrowser));
     if (ipcBrowser != null) {
       ipcBrowser.setSize(width, height)
       ipcBrowser.center()

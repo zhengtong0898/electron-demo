@@ -7,11 +7,10 @@ const { contextBridge, ipcRenderer } = require('electron')
 contextBridge.exposeInMainWorld('electronAPI', {
 
   setSize: (width: number, height: number) => {
-    console.log("setSize: running")
     ipcRenderer.send('setSize', width, height)
   },
 
-  setTitle: (title) => {
+  setTitle: (title: string) => {
     ipcRenderer.send('setTitle', title)
   }
 

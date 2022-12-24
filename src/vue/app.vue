@@ -1,18 +1,26 @@
 <template>
-    <div>Hello World!6</div>
+  <router-view />
 </template>
 
-  <script>
-  export default {
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  }
-  console.log("Hello World!")
-  window.electronAPI.setTitle("Hello World!")
-  window.electronAPI.setSize(1440, 900)
-  </script>
+nav {
+  padding: 30px;
 
-  <style lang="css">
-  html {
-      background-color: red;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
   }
-  </style>
+}
+</style>

@@ -78,10 +78,11 @@ export default defineComponent({
     }
 
     async function doLogin () {
-      if (name.value === "zt" && password.value === "123456") {
+      if (name.value === "admin" && password.value === "123456") {
         updateAlert("block", "登陆成功", "success", " 秒后跳转至软件界面.")
         await countDown()
         window.electronAPI.setSize(1440, 900)
+        window.electronAPI.setTitle("Settings Page")
         window.location.hash = "#/settings"
       } else {
         updateAlert("block", "登陆失败", "error", " 秒后关闭软件.")

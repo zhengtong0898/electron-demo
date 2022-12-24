@@ -23,10 +23,18 @@ yarn make
 yarn start
 
 ### 调试项目
-按 F5 快捷键
+1. 按 F5 快捷键  
+2. 软件运行时, 按 Ctrl + R 是刷新页面.  
+3. 软件运行时, 按 Ctrl + Shift + R 是强制刷新页面.  
+4. 软件运行时, 按 Ctrl + Shift + I 是打开调试面板.  
 
 ### 运行效果图
-![demo.png](./public/demo.png)
+运行软件后，打开的界面是登陆界面，用户名密码是: admin / 123456  
+![demo01.png](./public/demo01.png)  
+
+登陆成功后，会进入到Vue的模板页面(这里利用了vue-router特性).  
+![demo02.png](./public/demo02.png)  
+
 
 ### 关键信息
 
