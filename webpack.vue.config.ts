@@ -4,7 +4,7 @@ import CopyPlugin from 'copy-webpack-plugin';               // eslint-disable-li
 
 module.exports = {
     mode: "production",
-    entry: path.join(__dirname, "/src/index.vue.ts"),
+    entry: path.join(__dirname, "/src/vue/index.ts"),
     output: {
         path: path.join(__dirname, "/dist"),
         filename: './index.js'
@@ -13,7 +13,7 @@ module.exports = {
         new VueLoaderPlugin(),
         new CopyPlugin({
             patterns: [
-                { from: path.join(__dirname, "/src/preload.electron.ts") },
+                { from: path.join(__dirname, "/src/electron/preload.ts") },
                 { from: path.join(__dirname, "/public/index.html") }
             ]
         })

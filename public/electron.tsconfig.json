@@ -16,5 +16,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["src/**/*.vue.ts"]
+  "exclude": ["src/vue/*"]
 }

@@ -24,7 +24,7 @@ const config: ForgeConfig = {
             js: './dist/index.js',
             name: 'main_window',
             preload: {
-              js: './dist/preload.electron.ts',
+              js: './dist/preload.ts',
             },
           },
         ],
