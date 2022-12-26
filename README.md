@@ -32,6 +32,10 @@ yarn start
 
 3. 打包整个项目: yarn make  
 
+4. 直接运行`.js`代码: node filename.js
+
+4. 直接运行`.ts`代码: npx ts-node filename.ts
+
 4. VSCode 按 F5 快捷键, 可进入调试模式.  
 
 5. 软件运行时, 按 Ctrl + R 是刷新页面.  
