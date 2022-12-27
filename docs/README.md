@@ -1,8 +1,9 @@
 
+&nbsp;  
 ### Typescript
 1. [官网教程](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)  
 
-2. [var、let、const的区别]()  
+2. [var、let、const的区别](./typescript_var_let_const.md)  
 
 3. [import的语法和含义]()  
 
