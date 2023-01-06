@@ -10,9 +10,41 @@ import { rendererConfig } from './webpack.renderer.config';
 
 
 const config: ForgeConfig = {
-  packagerConfig: {},
+  packagerConfig: {
+    icon: './public/ibuprofen'
+  },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
+  makers: [
+    new MakerZIP({}, ['darwin']),
+    new MakerRpm({}),
+    {
+      name: '@electron-forge/maker-squirrel',
+      config: {
+        iconUrl: 'https://url/to/icon.ico',
+        setupIcon: './public/icon.ico',
+      },
+    },
+    {
+      name: '@electron-forge/maker-deb',
+      config: {
+        options: {
+          icon: './public/icon.png',
+        },
+      },
+    },
+    // {
+    //   name: '@electron-forge/maker-dmg',
+    //   config: {
+    //     icon: './public/icon.icns',
+    //   },
+    // },
+    // {
+    //   name: '@electron-forge/maker-wix',
+    //   config: {
+    //     icon: './public/icon.ico',
+    //   },
+    // },
+  ],
   plugins: [
     new WebpackPlugin({
       mainConfig,
