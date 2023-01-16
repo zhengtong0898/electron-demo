@@ -5,12 +5,12 @@
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
-    "start": "yarn makevue; electron-forge start",
+    "start": "yarn makevue && electron-forge start",
     "package": "electron-forge package",
-    "make": "yarn makevue; electron-forge make",
+    "make": "yarn makevue && electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
-    "makevue": "cd front; yarn build; cd ../;"
+    "makevue": "cd front && yarn build && cd ../;"
   },
   "keywords": [],
   "author": {
